@@ -1,1 +1,1 @@
-Check out the page `https://drkchu.github.io/admin-dashboard/`
+Check out the [page](https://drkchu.github.io/admin-dashboard/)

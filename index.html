@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="css/style.css">
     <!--Font Awesome cdnjns Link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="window-container">
 
         <!--Sidebar-->
         <div class="sidebar-container">
-            <div class="title-container">
-                <h1 class="title">Dashboard</h1>
+            <div class="title-container text-4xl font-bold">
+                <h1 class="title"> <i class="fa-solid fa-gauge fa-md">&nbsp;</i> Dashboard</h1>
             </div>
 
             <ul class="nav-buttons">
@@ -36,7 +37,10 @@
         <!--Header-->
         <div class="header-container">
             <div class="upper-header">
-                <div class="search-bar">Search bar</div>
+                <div class="search-bar-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" class="search-bar">
+                </div>
                 <div class="profile-buttons">
                     <i class="fa-regular fa-bell"></i>
                     <i class="fa-solid fa-user"></i>
@@ -45,14 +49,16 @@
             </div>
             <div class="lower-header">
                 <div class="header-intro">
-                    <i class="fa-solid fa-user fa-lg"></i>
-                    <p>Hi there,</p>
-                    <h2>Derek Chu (@drkchu)</h2>
+                    <i class="fa-solid fa-user fa-2xl"></i>
+                    <div class="header-intro-info">
+                        <p>Hi there,</p>
+                        <h2>Derek Chu (@drkchu)</h2>
+                    </div>
                 </div>
                 <div class="content-buttons">
-                    <button>New</button>
-                    <button>Upload</button>
-                    <button>Share</button>
+                    <button class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">New</button>
+                    <button class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">Upload</button>
+                    <button class="bg-red-500 hover:bg-red-400 text-white font-bold py-2 px-4 border-b-4 border-red-700 hover:border-red-500 rounded">Share</button>
                 </div>
             </div>
         </div>
@@ -61,113 +67,124 @@
         <div class="main-content-container">
             
             <!--Your Projects-->
-            <div class="projects">
-                <h2 class="projects-title">Your Projects</h2>
-
-                <div class="project">
-                    <h3 class="project-title">Super Cool Project</h3>
-                    <p class="project-description">Praesent orci nunc, ornare vel massa vel, molestie sollicitudin felis. Aenean bibendum dapibus ligula, sagittis varius lorem elementum nec. Vivamus nibh ante, rhoncus semper varius vel, pretium et urna. Aliquam.</p>
-                    <div class="project-buttons">
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-eye"></i>
-                        <i class="fa-solid fa-share-nodes"></i>
+            <div class="projects-container">
+                <h2 class="projects-title font-bold text-xl">Your Projects</h2>
+                <div class="projects-data">
+                    <div class="project">
+                        <h3 class="project-title font-bold">Super Cool Project</h3>
+                        <p class="project-description text-sm">Praesent orci nunc, ornare vel massa vel, molestie sollicitudin felis. Aenean bibendum dapibus ligula, sagittis varius lorem elementum nec. Vivamus nibh ante, rhoncus semper varius vel, pretium et urna. Aliquam.</p>
+                        <div class="project-buttons">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-eye"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                    </div>
+    
+                    <div class="project">
+                        <h3 class="project-title font-bold">Less Cool Project</h3>
+                        <p class="project-description text-sm">Praesent orci nunc, ornare vel massa vel, molestie sollicitudin felis. Aenean bibendum dapibus ligula, sagittis varius lorem elementum nec. Vivamus nibh ante, rhoncus semper varius vel, pretium et urna. Aliquam.</p>
+                        <div class="project-buttons">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-eye"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                    </div>
+    
+                    <div class="project">
+                        <h3 class="project-title font-bold">Impossible App</h3>
+                        <p class="project-description text-sm">Praesent orci nunc, ornare vel massa vel, molestie sollicitudin felis. Aenean bibendum dapibus ligula, sagittis varius lorem elementum nec. Vivamus nibh ante, rhoncus semper varius vel, pretium et urna. Aliquam.</p>
+                        <div class="project-buttons">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-eye"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                    </div>
+    
+                    <div class="project">
+                        <h3 class="project-title font-bold">Lemon Squeazy App</h3>
+                        <p class="project-description text-sm">Praesent orci nunc, ornare vel massa vel, molestie sollicitudin felis. Aenean bibendum dapibus ligula, sagittis varius lorem elementum nec. Vivamus nibh ante, rhoncus semper varius vel, pretium et urna. Aliquam.</p>
+                        <div class="project-buttons">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-eye"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                    </div>
+    
+                    <div class="project">
+                        <h3 class="project-title font-bold">Safe Ad Blocker</h3>
+                        <p class="project-description text-sm">Praesent orci nunc, ornare vel massa vel, molestie sollicitudin felis. Aenean bibendum dapibus ligula, sagittis varius lorem elementum nec. Vivamus nibh ante, rhoncus semper varius vel, pretium et urna. Aliquam.</p>
+                        <div class="project-buttons">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-eye"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                    </div>
+    
+                    <div class="project">
+                        <h3 class="project-title font-bold">Money Maker 9000</h3>
+                        <p class="project-description text-sm">Praesent orci nunc, ornare vel massa vel, molestie sollicitudin felis. Aenean bibendum dapibus ligula, sagittis varius lorem elementum nec. Vivamus nibh ante, rhoncus semper varius vel, pretium et urna. Aliquam.</p>
+                        <div class="project-buttons">
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-eye"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
                     </div>
                 </div>
-
-                <div class="project">
-                    <h3 class="project-title">Less Cool Project</h3>
-                    <p class="project-description">Praesent orci nunc, ornare vel massa vel, molestie sollicitudin felis. Aenean bibendum dapibus ligula, sagittis varius lorem elementum nec. Vivamus nibh ante, rhoncus semper varius vel, pretium et urna. Aliquam.</p>
-                    <div class="project-buttons">
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-eye"></i>
-                        <i class="fa-solid fa-share-nodes"></i>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <h3 class="project-title">Impossible App</h3>
-                    <p class="project-description">Praesent orci nunc, ornare vel massa vel, molestie sollicitudin felis. Aenean bibendum dapibus ligula, sagittis varius lorem elementum nec. Vivamus nibh ante, rhoncus semper varius vel, pretium et urna. Aliquam.</p>
-                    <div class="project-buttons">
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-eye"></i>
-                        <i class="fa-solid fa-share-nodes"></i>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <h3 class="project-title">Lemon Squeazy App</h3>
-                    <p class="project-description">Praesent orci nunc, ornare vel massa vel, molestie sollicitudin felis. Aenean bibendum dapibus ligula, sagittis varius lorem elementum nec. Vivamus nibh ante, rhoncus semper varius vel, pretium et urna. Aliquam.</p>
-                    <div class="project-buttons">
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-eye"></i>
-                        <i class="fa-solid fa-share-nodes"></i>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <h3 class="project-title">Safe Ad Blocker</h3>
-                    <p class="project-description">Praesent orci nunc, ornare vel massa vel, molestie sollicitudin felis. Aenean bibendum dapibus ligula, sagittis varius lorem elementum nec. Vivamus nibh ante, rhoncus semper varius vel, pretium et urna. Aliquam.</p>
-                    <div class="project-buttons">
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-eye"></i>
-                        <i class="fa-solid fa-share-nodes"></i>
-                    </div>
-                </div>
-
-                <div class="project">
-                    <h3 class="project-title">Money Maker 9000</h3>
-                    <p class="project-description">Praesent orci nunc, ornare vel massa vel, molestie sollicitudin felis. Aenean bibendum dapibus ligula, sagittis varius lorem elementum nec. Vivamus nibh ante, rhoncus semper varius vel, pretium et urna. Aliquam.</p>
-                    <div class="project-buttons">
-                        <i class="fa-regular fa-star"></i>
-                        <i class="fa-regular fa-eye"></i>
-                        <i class="fa-solid fa-share-nodes"></i>
-                    </div>
-                </div>
-
             </div>
 
             <!--Announcements-->
-            <div class="announcements">
-                <h2 class="announcements-title">Announcements</h2>
-
-                <div class="announcement-item">
-                    <h4 class="announcement-item-title">Site Maintenance</h4>
-                    <p class="announcement-item-info">Cras molestie enim dapibus vulputate consequat. Integer purus odio, posuere a nisl a, finibus sagittis magna. Nulla condimentum eget arcu quis dignissim. In quis nunc in velit iaculis laoreet. Donec dignissim vehicula vestibulum. Sed placerat tempus justo vel dictum. Integer consectetur nec tellus sed egestas. Ut ornare magna non quam interdum mollis id at neque...</p>
-                </div>
-
-                <div class="announcement-item">
-                    <h4 class="announcement-item-title">Community Share Day</h4>
-                    <p class="announcement-item-info">Mauris eu purus ac mi suscipit tristique sit amet tincidunt elit. Morbi ornare, orci a euismod varius, felis nisi congue sem, feugiat dignissim libero diam imperdiet nisi. In vitae luctus libero. Nullam at mollis lorem, id convallis mi. Nulla eu auctor ipsum. Curabitur rhoncus vulputate mauris, eu euismod velit suscipit laoreet. Nulla massa libero, imperdiet vel ex eget...</p>
-                </div>
-
-                <div class="announcement-item">
-                    <h4 class="announcement-item-title">Updated Privacy Policy</h4>
-                    <p class="announcement-item-info">Etiam libero nibh, lobortis a neque eu, molestie vulputate turpis. Vestibulum viverra mauris non porta hendrerit. Pellentesque in est laoreet, ultrices sapien vel, imperdiet felis. Ut finibus mauris tellus, eget tincidunt felis aliquam eu. Aliquam non mi dignissim, pretium mi vel, feugiat erat. Curabitur at ligula posuere, rhoncus purus sed, tincidunt neque. Sed nisi...</p>
+            <div class="announcements-container">
+                <h2 class="announcements-title font-bold text-xl">Announcements</h2>
+                <div class="announcements-data">
+                    <div class="announcement-item">
+                        <h4 class="announcement-item-title font-bold">Site Maintenance</h4>
+                        <p class="announcement-item-info text-sm">Cras molestie enim dapibus vulputate consequat. Integer purus odio, posuere a nisl a, finibus sagittis magna...</p>
+                    </div>
+    
+                    <div class="announcement-item">
+                        <h4 class="announcement-item-title font-bold">Community Share Day</h4>
+                        <p class="announcement-item-info text-sm">Mauris eu purus ac mi suscipit tristique sit amet tincidunt elit. Morbi ornare, orci a euismod varius...</p>
+                    </div>
+    
+                    <div class="announcement-item">
+                        <h4 class="announcement-item-title font-bold">Updated Privacy Policy</h4>
+                        <p class="announcement-item-info text-sm">Etiam libero nibh, lobortis a neque eu, molestie vulputate turpis. Vestibulum viverra mauris non porta hendrerit...</p>
+                    </div>
                 </div>
             </div>
 
             <!--Trending-->
-            <div class="trending">
-                <h2 class="trending-title">Trending</h2>
-                <div class="npc">
-                    <i class="fa-solid fa-hippo"></i>
-                    <p class="npc-username">@hippo</p>
-                    <p class="npc-title">Hungry</p>
-                </div>
-                <div class="npc">
-                    <i class="fa-solid fa-otter"></i>
-                    <p class="npc-username">@otter</p>
-                    <p class="npc-title">Recreational Swimmer</p>
-                </div>
-                <div class="npc">
-                    <i class="fa-solid fa-dog"></i>
-                    <p class="npc-username">@dog</p>
-                    <p class="npc-title">Bone Whisperer</p>
-                </div>
-                <div class="npc">
-                    <i class="fa-solid fa-cat"></i>
-                    <p class="npc-username">@cat</p>
-                    <p class="npc-title">Milk Connoisseur</p>
+            <div class="trending-container">
+                <h2 class="trending-title font-bold text-xl">Trending</h2>
+                <div class="trending-data">
+                    <div class="npc">
+                        <i class="fa-solid fa-hippo"></i>
+                        <div class="npc-info">
+                            <p class="npc-username">@hippo</p>
+                            <p class="npc-title">Hungry</p>
+                        </div>
+                    </div>
+                    <div class="npc">
+                        <i class="fa-solid fa-otter"></i>
+                        <div class="npc-info">
+                            <p class="npc-username">@otter</p>
+                            <p class="npc-title">Recreational Swimmer</p>
+                        </div>
+                    </div>
+                    <div class="npc">
+                        <i class="fa-solid fa-dog"></i>
+                        <div class="npc-info">
+                            <p class="npc-username">@dog</p>
+                            <p class="npc-title">Bone Whisperer</p>                    
+                        </div>
+                    </div>
+                    <div class="npc">
+                        <i class="fa-solid fa-cat"></i>
+                        <div class="npc-info">
+                            <p class="npc-username">@cat</p>
+                            <p class="npc-title">Milk Connoisseur</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 

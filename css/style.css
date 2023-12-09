@@ -1,9 +1,26 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
+
+.window-container {
+    max-height: 100vh;
+    display: grid;
+    grid-template: 1fr 5fr / 1fr 4fr;
+}
+
+.sidebar-container {
+    grid-row: 1 / -1; /* Span across entire first column*/
+    padding: 1rem;
+}
+
 
 /* Typography */
 h3 {
     display: inline;
+}
+
+li {
+    list-style-type: none;
 }
